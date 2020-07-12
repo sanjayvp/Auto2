@@ -1,0 +1,3 @@
+com\dice\base\BasePageObject.class
+com\dice\pages\LoginPage.class
+com\dice\pages\ProfilePage.class
