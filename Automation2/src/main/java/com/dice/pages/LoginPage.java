@@ -9,7 +9,7 @@ public class LoginPage extends BasePageObject<LoginPage> {
 private By emailfield=By.xpath("//input[@id='email']");
 private By passwordfield=By.xpath("//input[@id='password']");	
 private By signinButton= By.xpath("//button[@type='submit']");
-private  By ErrorMessageLocator=By.xpath("//*[@data-automation-id='login-failure-help-message']");
+public  By ErrorMessageLocator=By.xpath("//*[@data-automation-id='login-failure-help-message']");
 
 public LoginPage(WebDriver driver) {
 		super(driver);
@@ -32,10 +32,12 @@ public ProfilePage pushSigninButton() {
 
 public  String  getLoginErrorMessage() {
 	waitForVisibilityOf(ErrorMessageLocator, 10);
-	
-	return getText(ErrorMessageLocator);
+	String er=driver.findElement(ErrorMessageLocator).getText();
+	return er;
 	
 }
+
+
 
 
 

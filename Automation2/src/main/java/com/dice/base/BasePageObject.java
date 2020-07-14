@@ -60,9 +60,9 @@ public class BasePageObject<T> {
 		return driver.getTitle();
 		
 	}
-	protected  String getText(By locator) {
+	public  String getTextt(By locator) {
 		
-		return find(locator).getText();
+		return driver.findElement(locator).getText();
 		
 	}
 
