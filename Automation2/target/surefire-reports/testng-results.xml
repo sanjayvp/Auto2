@@ -1,21 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="FirstSuite" duration-ms="21239" started-at="2020-07-13T00:27:45 IST" finished-at="2020-07-13T00:28:06 IST">
+  <suite name="FirstSuite" duration-ms="43170" started-at="2020-07-14T17:31:56 IST" finished-at="2020-07-14T17:32:39 IST">
     <groups>
     </groups>
-    <test name="FirstTest" duration-ms="21239" started-at="2020-07-13T00:27:45 IST" finished-at="2020-07-13T00:28:06 IST">
+    <test name="FirstTest" duration-ms="43170" started-at="2020-07-14T17:31:56 IST" finished-at="2020-07-14T17:32:39 IST">
       <class name="com.dice.LoginTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.dice.LoginTest@49993335]" name="setUp" is-config="true" duration-ms="3740" started-at="2020-07-13T00:27:45 IST" finished-at="2020-07-13T00:27:48 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.dice.LoginTest@3c0f93f1]" name="setUp" is-config="true" duration-ms="3793" started-at="2020-07-14T17:31:56 IST" finished-at="2020-07-14T17:32:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="positiveLoginTest()[pri:0, instance:com.dice.LoginTest@49993335]" name="positiveLoginTest" duration-ms="16827" started-at="2020-07-13T00:27:48 IST" finished-at="2020-07-13T00:28:05 IST">
+        <test-method status="PASS" signature="negativeLoginTest(java.util.Map)[pri:0, instance:com.dice.LoginTest@3c0f93f1]" name="negativeLoginTest" duration-ms="17878" started-at="2020-07-14T17:32:00 IST" data-provider="CSVDataprovider" finished-at="2020-07-14T17:32:17 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{no=1, description=Incorrect email and correct password, password=ganitanand12, userid=aerosoftn99@gmail.com}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- positiveLoginTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.dice.LoginTest@49993335]" name="teardown" is-config="true" duration-ms="654" started-at="2020-07-13T00:28:05 IST" finished-at="2020-07-13T00:28:06 IST">
+        </test-method> <!-- negativeLoginTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.dice.LoginTest@3c0f93f1]" name="teardown" is-config="true" duration-ms="642" started-at="2020-07-14T17:32:17 IST" finished-at="2020-07-14T17:32:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.dice.LoginTest@3c0f93f1]" name="setUp" is-config="true" duration-ms="3063" started-at="2020-07-14T17:32:18 IST" finished-at="2020-07-14T17:32:21 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="negativeLoginTest(java.util.Map)[pri:0, instance:com.dice.LoginTest@3c0f93f1]" name="negativeLoginTest" duration-ms="17114" started-at="2020-07-14T17:32:21 IST" data-provider="CSVDataprovider" finished-at="2020-07-14T17:32:38 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{no=2, description=correct email and incorrect password, password=ganitanand12333, userid=aerosoftn@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLoginTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.dice.LoginTest@3c0f93f1]" name="teardown" is-config="true" duration-ms="639" started-at="2020-07-14T17:32:38 IST" finished-at="2020-07-14T17:32:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

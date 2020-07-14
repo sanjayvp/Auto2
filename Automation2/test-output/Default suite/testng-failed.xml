@@ -8,6 +8,7 @@
           <include name="setUp"/>
           <include name="teardown"/>
           <include name="positiveLoginTest"/>
+          <include name="negativeLoginTest"/>
         </methods>
       </class> <!-- com.dice.LoginTest -->
     </classes>

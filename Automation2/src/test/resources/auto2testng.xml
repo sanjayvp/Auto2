@@ -4,6 +4,9 @@
 	<test name="FirstTest">
 		<classes>
 			<class name="com.dice.LoginTest" >
+			<methods>
+			<exclude name="positiveLoginTest"></exclude>
+			</methods>
 
 </class>
 		

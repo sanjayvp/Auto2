@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePageObject<T> {
-	protected WebDriver driver;
+	protected static WebDriver driver;
 	protected WebDriverWait wait;
 
 	// constructor
@@ -30,14 +30,14 @@ public class BasePageObject<T> {
 		find(element).sendKeys(text);
 	}
 
-	private WebElement find(By element) {
+	private  WebElement find(By element) {
 		return driver.findElement(element);
 
 	}
 	protected void click(By element) {
 		find(element).click();
 	}
-	protected void waitForVisibilityOf(By locator,Integer...timeOutinSeconds) {
+	public  void waitForVisibilityOf(By locator,Integer...timeOutinSeconds) {
 		int attempts=0;
 		while (attempts<2) {
 			try {
@@ -51,13 +51,18 @@ public class BasePageObject<T> {
 		}
 		
 	}
-	private void waitfor(ExpectedCondition<WebElement> condition,Integer timeOutInSeconds) {
+	private  void waitfor(ExpectedCondition<WebElement> condition,Integer timeOutInSeconds) {
 		timeOutInSeconds=timeOutInSeconds!=null?timeOutInSeconds:30;
 		WebDriverWait wait=new WebDriverWait(driver,timeOutInSeconds);
 		wait.until(condition);
 	}
 	public String getTitle() {
 		return driver.getTitle();
+		
+	}
+	protected  String getText(By locator) {
+		
+		return find(locator).getText();
 		
 	}
 

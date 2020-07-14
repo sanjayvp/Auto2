@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-FirstSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FirstSuite" title="com.dice.LoginTest" hash-for-method="positiveLoginTest">positiveLoginTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-FirstSuite" title="com.dice.LoginTest" hash-for-method="negativeLoginTest({no=1, description=Incorrect email and correct password, password=ganitanand12, userid=aerosoftn99@g...)">negativeLoginTest({no=1, description=Incorrect email and correct password, password=ganitanand12, userid=aerosoftn99@g...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FirstSuite" title="com.dice.LoginTest" hash-for-method="negativeLoginTest({no=2, description=correct email and incorrect password, password=ganitanand12333, userid=aerosoftn@...)">negativeLoginTest({no=2, description=correct email and incorrect password, password=ganitanand12333, userid=aerosoftn@...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-FirstSuite -->
@@ -125,9 +130,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="positiveLoginTest">
-                  </a> <!-- positiveLoginTest -->
-                  <span class="method-name">positiveLoginTest</span>
+                  <a name="negativeLoginTest({no=1, description=Incorrect email and correct password, password=ganitanand12, userid=aerosoftn99@g...)">
+                  </a> <!-- negativeLoginTest({no=1, description=Incorrect email and correct password, password=ganitanand12, userid=aerosoftn99@g...) -->
+                  <span class="method-name">negativeLoginTest</span>
+                  <span class="parameters">({no=1, description=Incorrect email and correct password, password=ganitanand12, userid=aerosoftn99@gmail.com})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="negativeLoginTest({no=2, description=correct email and incorrect password, password=ganitanand12333, userid=aerosoftn@...)">
+                  </a> <!-- negativeLoginTest({no=2, description=correct email and incorrect password, password=ganitanand12333, userid=aerosoftn@...) -->
+                  <span class="method-name">negativeLoginTest</span>
+                  <span class="parameters">({no=2, description=correct email and incorrect password, password=ganitanand12333, userid=aerosoftn@gmail.com})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -144,7 +158,11 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;FirstSuite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;FirstTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.dice.LoginTest&quot;/&gt;
+      &lt;class name=&quot;com.dice.LoginTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;exclude name=&quot;positiveLoginTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.dice.LoginTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- FirstTest --&gt;
 &lt;/suite&gt; &lt;!-- FirstSuite --&gt;
@@ -184,16 +202,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'positiveLoginTest')
+data.setCell(0, 1, 'negativeLoginTest')
 data.setCell(0, 2, 'com.dice.LoginTest')
-data.setCell(0, 3, 16827);
+data.setCell(0, 3, 17878);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'negativeLoginTest')
+data.setCell(1, 2, 'com.dice.LoginTest')
+data.setCell(1, 3, 17114);
 window.suiteTableData['FirstSuite']= { tableData: data, tableDiv: 'times-div-FirstSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 seconds</span>
+              <span class="suite-total-time">Total running time: 34 seconds</span>
               <div id="times-div-FirstSuite">
               </div> <!-- times-div-FirstSuite -->
             </div> <!-- times-div -->
@@ -208,9 +230,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-FirstSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.dice.LoginTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">positiveLoginTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-FirstSuite" class="panel">
@@ -225,12 +254,24 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">positiveLoginTest</span>
-                <span class="method-start">3740 ms</span>
+                <span class="method-name">negativeLoginTest({no=1, description=Incorrect email and correct password, password=ganitanand12, userid=aerosoftn99@g...)</span>
+                <span class="method-start">3793 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">20569 ms</span>
+                <span class="method-start">21672 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">22314 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">negativeLoginTest({no=2, description=correct email and incorrect password, password=ganitanand12333, userid=aerosoftn@...)</span>
+                <span class="method-start">25377 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">42492 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
