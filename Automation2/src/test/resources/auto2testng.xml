@@ -3,27 +3,27 @@
 <suite name="FirstSuite" verbose="1">
 
 	<test name="FirstTest_FF">
-	<parameter name="browser"  value="firefox" />
+		<parameter name="browser" value="firefox" />
 		<classes>
-			<class name="com.dice.LoginTest" >
-			<methods>
-			<include name="positiveLoginTest"></include>
-			</methods>
+			<class name="com.dice.LoginTest">
+				<methods>
+					<include name="positiveLoginTest"></include>
+				</methods>
 
-</class>
-		
+			</class>
+
 		</classes>
 	</test>
-<test name="FirstTest_Chrome">
-<parameter name="browser"  value="chrome" />
+	<test name="FirstTest_Chrome">
+		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.dice.LoginTest" >
-			<methods>
-			<include name="positiveLoginTest"></include>
-			</methods>
+			<class name="com.dice.LoginTest">
+				<methods>
+					<include name="positiveLoginTest"></include>
+				</methods>
 
-</class>
-		
+			</class>
+
 		</classes>
 	</test>
 </suite>

@@ -17,14 +17,14 @@ public String validpassword = "ganitanand12@";
 
 	@Test
 	public void positiveLoginTest() {
-		LoginPage loginpg = new LoginPage(driver);
-		System.out.println("open loginpage");
+		LoginPage loginpg = new LoginPage(driver,log);
+		log.info("opening loginpage"+" Thread Id:- "+Thread.currentThread().getId());
 		loginpg.openLoginPage(Loginurl);
-		System.out.println("fill up email and password"); 
+		log.info("fill up email and password"+" Thread Id:- "+Thread.currentThread().getId()); 
 		loginpg.fillupEmailAndPassword(validemail, validpassword);
 		ProfilePage profilepg = loginpg.pushSigninButton();
 		profilepg.waitForProfilePageToLoad();
-		System.out.println("verify actual title");
+		log.info("verify actual title"+" Thread Id:- "+Thread.currentThread().getId());
 		Assert.assertTrue(profilepg.getTitle().equals(exptitle), "Actual title is not as expected");
 
 	}
@@ -39,7 +39,7 @@ public String validpassword = "ganitanand12@";
 		
 			
 		System.out.println("Test no is : "+testno+" for "+description+"where email/pasword are "+email+" , "+password);
-		LoginPage loginpg = new LoginPage(driver);
+		LoginPage loginpg = new LoginPage(driver,log);
 		loginpg.openLoginPage(Loginurl);
 		// fill up email and password
 		loginpg.fillupEmailAndPassword(email, password);

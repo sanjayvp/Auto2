@@ -9,14 +9,41 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">FirstSuite</th></tr>
-<tr><td><a href="#t0">FirstTest_FF</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">61,183</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">FirstTest_Chrome</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">17,959</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">79,142</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">FirstTest_Chrome</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">66,788</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Secondtest_firefox</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">79,171</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">1</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">145,959</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">FirstSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">FirstTest_FF &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.dice.LoginTest</td><td><a href="#m0">positiveLoginTest</a></td><td rowspan="1">1594760321603</td><td rowspan="1">39153</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">FirstTest_Chrome &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.dice.LoginTest</td><td><a href="#m1">positiveLoginTest</a></td><td rowspan="1">1594760373422</td><td rowspan="1">12618</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">FirstSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">FirstTest_Chrome &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.dice.LoginTest</td><td><a href="#m0">positiveLoginTest</a></td><td rowspan="1">1594814822352</td><td rowspan="1">61898</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Secondtest_firefox &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.dice.LoginTest</td><td><a href="#m1">positiveLoginTest</a></td><td rowspan="1">1594814826412</td><td rowspan="1">57923</td></tr></tbody>
 </table>
-<h2>FirstTest_FF</h2><h3 id="m0">com.dice.LoginTest#positiveLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>FirstTest_Chrome</h2><h3 id="m1">com.dice.LoginTest#positiveLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>FirstTest_Chrome</h2><h3 id="m0">com.dice.LoginTest#positiveLoginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@id=&apos;email&apos;]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-SFC0TF7&apos;, ip: &apos;192.168.43.149&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 76.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200507114007, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 16008, moz:profile: C:\Users\sanjay\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6d01e6f7-867c-4fbb-be4a-8149faac18e2
+*** Element info: {Using=xpath, value=//input[@id=&apos;email&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.dice.base.BasePageObject.find(BasePageObject.java:34)
+	at com.dice.base.BasePageObject.type(BasePageObject.java:30)
+	at com.dice.pages.LoginPage.fillupEmailAndPassword(LoginPage.java:27)
+	at com.dice.LoginTest.positiveLoginTest(LoginTest.java:24)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Secondtest_firefox</h2><h3 id="m1">com.dice.LoginTest#positiveLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

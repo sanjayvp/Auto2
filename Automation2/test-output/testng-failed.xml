@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [FirstSuite]">
-  <test thread-count="5" name="FirstTest(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [FirstSuite]" parallel="tests">
+  <test thread-count="2" name="FirstTest_Chrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.dice.LoginTest">
         <methods>
@@ -11,5 +12,5 @@
         </methods>
       </class> <!-- com.dice.LoginTest -->
     </classes>
-  </test> <!-- FirstTest(failed) -->
+  </test> <!-- FirstTest_Chrome(failed) -->
 </suite> <!-- Failed suite [FirstSuite] -->

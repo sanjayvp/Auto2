@@ -8,7 +8,8 @@ import com.dice.base.BasePageObject;
 public class ProfilePage extends BasePageObject<ProfilePage>{
 	
 	private By AddProfileButton=By.xpath("(//*[text()='Add to Profile'])[4]");
- public ProfilePage(WebDriver driver) {
+
+	public ProfilePage(WebDriver driver) {
 	 super(driver);
 	 
  }
